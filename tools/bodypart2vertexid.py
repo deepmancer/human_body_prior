@@ -34,11 +34,11 @@ def find_handVertexIDs(blend_weights, all_partIds, interested_partIds):
     return VertexIDs
 
 def smplx_part_ids():
-    from human_body_prior.tools.omni_tools import copy2cpu as c2c
+    from modules.human_body_prior.tools.omni_tools import copy2cpu as c2c
     from body_visualizer.tools.vis_tools import colors
     import torch
 
-    from human_body_prior.body_model.body_model import BodyModel
+    from modules.human_body_prior.body_model.body_model import BodyModel
     # all_partids = np.load('/ps/project/common/moshpp/smplx/part2num.npy', allow_pickle=True).tolist()
     bm = BodyModel(bm_fname='/ps/project/common/moshpp/smplx/locked_head/model_6_merged_exp_hands_fixed_eyes/neutral/model.npz')
     # bm = BodyModel(bm_fname='/ps/scratch/soma/support_files/smplx_downsampled/328/female/model.npz')
@@ -113,10 +113,10 @@ def smplx_part_ids():
 #
 #
 def smplh_part_ids():
-    from human_body_prior.tools.omni_tools import copy2cpu as c2c
+    from modules.human_body_prior.tools.omni_tools import copy2cpu as c2c
     from body_visualizer.tools.vis_tools import colors
 
-    from human_body_prior.body_model.body_model import BodyModel
+    from modules.human_body_prior.body_model.body_model import BodyModel
     bm = BodyModel(bm_fname='/ps/scratch/common/moshpp/smplh/locked_head/female/model.npz')
 
     smplx_partids = {'body': [0, 1, 2, 3, 4, 5, 6, 9, 13, 14, 16, 17, 18, 19,22,23,24,],
@@ -163,10 +163,10 @@ def smplh_part_ids():
     mv.save_snapshot('/ps/scratch/common/moshpp/smplh/part2vids.jpeg')
 # #
 # def mano_part_ids():
-#     from human_body_prior.tools.omni_tools import copy2cpu as c2c
-#     from human_body_prior.tools.omni_tools import colors
+#     from modules.human_body_prior.tools.omni_tools import copy2cpu as c2c
+#     from modules.human_body_prior.tools.omni_tools import colors
 #
-#     from human_body_prior.body_model.body_model import BodyModel
+#     from modules.human_body_prior.body_model.body_model import BodyModel
 #     bm = BodyModel(bm_fname='/ps/scratch/common/moshpp/mano/MANO_LEFT.npz')
 #
 #     smplx_partids = {'hand': [0, 1],

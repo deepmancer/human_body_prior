@@ -42,20 +42,20 @@ except Exception as e:
 from torch import nn
 import torch
 
-from human_body_prior.tools.model_loader import load_model
+from modules.human_body_prior.tools.model_loader import load_model
 
 import numpy as np
 
-from human_body_prior.tools.omni_tools import copy2cpu as c2c
+from modules.human_body_prior.tools.omni_tools import copy2cpu as c2c
 
-from human_body_prior.tools.omni_tools import log2file
+from modules.human_body_prior.tools.omni_tools import log2file
 
-from human_body_prior.models.vposer_model import VPoser
-from human_body_prior.tools.omni_tools import flatten_list
+from modules.human_body_prior.models.vposer_model import VPoser
+from modules.human_body_prior.tools.omni_tools import flatten_list
 
 
 def visualize(points, bm_f, mvs, kpts_colors, verbosity=2, logger=None):
-    from human_body_prior.tools.omni_tools import log2file
+    from modules.human_body_prior.tools.omni_tools import log2file
 
     if logger is None: logger = log2file()
 

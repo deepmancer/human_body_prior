@@ -18,10 +18,10 @@ from loguru import logger
 from scipy.spatial.transform import Rotation as R
 from torch import nn
 
-from human_body_prior.body_model.body_model import BodyModel
-from human_body_prior.models.ik_engine import IK_Engine
-from human_body_prior.tools.omni_tools import copy2cpu as c2c
-from human_body_prior.tools.omni_tools import create_list_chunks
+from modules.human_body_prior.body_model.body_model import BodyModel
+from modules.human_body_prior.models.ik_engine import IK_Engine
+from modules.human_body_prior.tools.omni_tools import copy2cpu as c2c
+from modules.human_body_prior.tools.omni_tools import create_list_chunks
 from tqdm import tqdm
 from body_visualizer.tools.vis_tools import render_smpl_params
 from body_visualizer.tools.vis_tools import imagearray2file
@@ -31,12 +31,12 @@ from glob import glob
 import numpy as np
 import torch
 from loguru import logger
-from human_body_prior.tools.omni_tools import get_support_data_dir
+from modules.human_body_prior.tools.omni_tools import get_support_data_dir
 
 from body_visualizer.tools.vis_tools import imagearray2file
 from body_visualizer.tools.vis_tools import render_smpl_params
-from human_body_prior.body_model.body_model import BodyModel
-from human_body_prior.tools.omni_tools import get_support_data_dir
+from modules.human_body_prior.body_model.body_model import BodyModel
+from modules.human_body_prior.tools.omni_tools import get_support_data_dir
 class SourceKeyPoints(nn.Module):
     def __init__(self,
                  bm: Union[str, BodyModel],
